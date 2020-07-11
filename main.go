@@ -13,7 +13,8 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// Routing
-	e.GET("/main", handler.MainPage())
+	e.GET("/:clinicname/login", handler.LoginPage())
+	e.GET("/:clinicname/main", handler.MainPage())
 
 	// Setup
 	e.Start(":8080")
